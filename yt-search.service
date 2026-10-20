@@ -1,0 +1,17 @@
+[Unit]
+Description=YouTube Search Server
+After=graphical-session.target network.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/rr/Programs/ytb-server/server.py
+WorkingDirectory=/home/rr/Programs/ytb-server
+Restart=on-failure
+RestartSec=5
+Environment=HOME=/home/rr
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/rr/.Xauthority
+
+[Install]
+WantedBy=default.target
