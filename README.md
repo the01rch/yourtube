@@ -27,13 +27,13 @@ Usage
 
 To use the server, open a web browser and navigate to http://localhost:8080. You can then interact with the server using the following URLs:
 
- .   /: Displays the main page of the server
- .   /style.css: Displays the CSS file for the server
- .   /ytb-logo.png: Displays the logo image for the server
- .   /copy/<video_id>: Copies the video ID and other metadata to the clipboard
- .   /channel/<channel_id>: Displays the channel data for the specified channel
- .   /playlist/<playlist_id>: Displays the playlist data for the specified playlist
- .   /search?q=<query>: Searches for videos, playlists, or channels using the specified query
+*  /: Displays the main page of the server
+*  /style.css: Displays the CSS file for the server
+*  /ytb-logo.png: Displays the logo image for the server
+*  /copy/<video_id>: Copies the video ID and other metadata to the clipboard
+*  /channel/<channel_id>: Displays the channel data for the specified channel
+*  /playlist/<playlist_id>: Displays the playlist data for the specified playlist
+*  /search?q=<query>: Searches for videos, playlists, or channels using the specified query
 
 ## Contributing
 
@@ -43,7 +43,6 @@ License
 This project is licensed under the MIT License. See the LICENSE file for details.
 Acknowledgments
 
-  .  yt-dlp for providing the library for fetching YouTube data
-  .  http.server for providing the library for creating a web server
-  .  Arch Linux for providing the base system and tools
-
+*  yt-dlp for providing the library for fetching YouTube data
+*  http.server for providing the library for creating a web server
+*  Arch Linux for providing the base system and tools
