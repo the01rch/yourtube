@@ -1,5 +1,7 @@
 # YouTube Frontend Web Server
 
+![YouTube Frontend Web Server Logo](ytb-logo.png)
+
 A Python-based web server that creates a new frontend for YouTube.
 
 ## Overview
