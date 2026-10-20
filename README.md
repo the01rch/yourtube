@@ -18,8 +18,11 @@ YouTube data and the `http.server` library to create a web server.
 * Has a simple and intuitive interface for navigating and searching YouTube data
 * Can be easily customized and extended using HTML, CSS, and JavaScript
 
-When u click into a thumbnail the link is coppied into clipboard so u can open 
-and play the video using **mpv** or download the video using 'yt-dlp'.
+
+This web server was originally created for **Surf Browser**, with a focus on 
+playing external videos using the **MPV GPU engine**. When you click on a thumbnail,
+ the video link is automatically copied to your clipboard. After pasting the 
+ link, you can play the video using `MPV` or download it using `yt-dlp`.
 
 ## Installation and Setup
 To run the server, simply execute the `server.py` file:
