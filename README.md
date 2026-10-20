@@ -50,10 +50,12 @@ You can then interact with the server using the following URLs:
 ## Contributing
 
 Pull requests are welcome! If you'd like to contribute to the project, please fork the repository and submit a pull request. Be sure to follow the standard professional guidelines for pull requests.
-License
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-Acknowledgments
+
+## Acknowledgments
 
 *  yt-dlp for providing the library for fetching YouTube data
 *  http.server for providing the library for creating a web server
