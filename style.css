@@ -1,0 +1,332 @@
+body {
+    font-family: monospace;
+    background: #282828;
+    color: #ebdbb2;
+    margin: 0;
+    padding: 2em;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h2 {
+    color: #fe8019;
+}
+
+h1 {
+    color: #fe8019;
+    font-size: 1.2em;
+    margin: 1em 0 0.5em;
+    /* Align with grid: same max-width, same left edge */
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Top header: centered logo + search ===== */
+header.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    margin: 0 auto 1.5em;
+    max-width: 960px;
+}
+
+header.top .logo {
+    width: 340px;
+    max-width: 60vw;
+    height: auto;
+    display: block;
+}
+
+header.top .logo-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    line-height: 0;
+}
+
+header.top .logo-link:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+header.top .search-form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0;
+}
+
+header.top .search-form input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 12px 18px;
+    background: #1d2021;
+    color: #ebdbb2;
+    border: 1px solid #504945;
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+header.top .search-form input:focus {
+    border-color: #fe8019;
+}
+
+a {
+    color: #83a598;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* ===== Content wrapper: left edge matches the grid ===== */
+main.content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ===== Filter buttons (left-aligned with grid) ===== */
+.filters {
+    margin: 0.5em 0 1em;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.filters a {
+    padding: 6px 14px;
+    border: 1px solid #504945;
+    border-radius: 999px;
+    color: #ebdbb2;
+    background: #1d2021;
+    font-size: 0.9em;
+}
+
+.filters a:hover {
+    border-color: #83a598;
+    text-decoration: none;
+}
+
+.filters a.active {
+    background: #fe8019;
+    border-color: #fe8019;
+    color: #282828;
+    font-weight: 600;
+}
+
+/* ===== YouTube-style grid ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5em 1em;
+    align-items: start;
+    margin-top: 0.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    contain: content;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card:hover {
+    text-decoration: none;
+}
+
+.thumb-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.card .thumb-wrap img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #1d2021;
+    transition: border-radius 0.15s ease;
+}
+
+.card:hover .thumb-wrap img {
+    border-radius: 6px;
+}
+
+.duration {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.75em;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.card .info {
+    display: flex;
+    gap: 0.75em;
+    margin-top: 0.75em;
+    align-items: flex-start;
+}
+
+.card .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95em;
+    user-select: none;
+}
+
+.card .text {
+    flex: 1;
+    min-width: 0;
+}
+
+.card .title {
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #ebdbb2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.card .meta {
+    color: #a89984;
+    font-size: 0.82em;
+    margin-top: 0.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== Channel cards ===== */
+.ch-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: inherit;
+    padding: 0.75em;
+    border-radius: 8px;
+    background: #1d2021;
+    contain: content;
+    transition: background 0.15s ease;
+}
+
+.ch-card:hover {
+    background: #32302f;
+    text-decoration: none;
+}
+
+.ch-card img,
+.ch-ph {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #32302f;
+    display: block;
+    margin-bottom: 0.6em;
+}
+
+.ch-card .title {
+    font-size: 0.95em;
+    line-height: 1.3;
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.ch-card .meta {
+    color: #a89984;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+}
+
+/* ===== Pagination (kept centered as a footer) ===== */
+.pagination {
+    margin: 2.5em 0 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.pagination a,
+.pagination .current {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border: 1px solid #504945;
+    border-radius: 3px;
+    color: #83a598;
+    text-decoration: none;
+}
+
+.pagination a:hover { border-color: #83a598; }
+
+.pagination .current {
+    background: #fe8019;
+    color: #282828;
+    border-color: #fe8019;
+}
+
+.duration.playlist-badge {
+    background: rgba(60, 60, 60, 0.9);
+    color: #ebdbb2;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Second row: sort chips — invisible until you hover the row */
+.filters.sort-filters {
+    margin-top: -0.4em;
+    font-size: 0.85em;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    /* Keeps the row's height reserved so the grid doesn't jump */
+    min-height: 26px;
+    align-items: center;
+}
+
+.filters.sort-filters:hover {
+    opacity: 1;
+}
+
+.filters.sort-filters a {
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Active sort gets a subtle underline so you can tell which is on
+   when the row is visible */
+.filters.sort-filters a.active {
+    background: transparent;
+    color: #fe8019;
+    border-color: #fe8019;
+    font-weight: 600;
+}
