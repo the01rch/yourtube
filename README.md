@@ -6,7 +6,9 @@ A Python-based web server that creates a new frontend for YouTube.
 
 ## Overview
 
-This project creates a web server that allows users to interact with YouTube data using a custom frontend. The server uses the `yt-dlp` library to fetch YouTube data and the `http.server` library to create a web server.
+This project creates a web server that allows users to interact with YouTube 
+data using a custom frontend. The server uses the `yt-dlp` library to fetch 
+YouTube data and the `http.server` library to create a web server.
 
 ## Features
 
@@ -16,16 +18,23 @@ This project creates a web server that allows users to interact with YouTube dat
 * Has a simple and intuitive interface for navigating and searching YouTube data
 * Can be easily customized and extended using HTML, CSS, and JavaScript
 
+When u click into a thumbnail the link is coppied into clipboard so u can open 
+and play the video using **mpv** or download the video using 'yt-dlp'.
+
 ## Installation and Setup
 To run the server, simply execute the `server.py` file:
 ```bash
 python3 server.py
 ```
 
-The server will start listening on port 8080 by default. You can change the port number by modifying the port variable in the server.py file.
-Usage
+The server will start listening on port 8080 by default. You can change the 
+port number by modifying the port variable in the server.py file.
 
-To use the server, open a web browser and navigate to http://localhost:8080. You can then interact with the server using the following URLs:
+## Usage
+
+To use the server, open a web browser and navigate to http://localhost:8080. 
+
+You can then interact with the server using the following URLs:
 
 *  /: Displays the main page of the server
 *  /style.css: Displays the CSS file for the server
